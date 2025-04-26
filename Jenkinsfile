@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKERHUB_USERNAME = 'prathamchouhan'
-        IMAGE_NAME = 'flask-app'
+        IMAGE_NAME = 'flask-app-pratham'
         // This credential ID created in Jenkins Credentials
         DOCKER_CREDENTIALS_ID = 'dockerhub-credentials-pratham'
     }
@@ -12,7 +12,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 echo 'Cloning repository...'
-                git branch: 'main', url:''
+                git branch: 'main', url:'https://github.com/chouhanpratham/flask-app.git'
             }
         }
 
