@@ -28,7 +28,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo 'Building Docker image...'
-                sh "docker-build --load -t ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:latest ."
+                sh "docker buildx --load -t ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:latest ."
             }
         }
 
