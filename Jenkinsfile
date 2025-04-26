@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKERHUB_USERNAME = 'prathamchouhan'
-        IMAGE_NAME = 'flask-app-pratham'
+        IMAGE_NAME = 'flask-app-p'
         // This credential ID created in Jenkins Credentials
         DOCKER_CREDENTIALS_ID = 'dockerhub-credentials-pratham'
     }
