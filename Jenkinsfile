@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKERHUB_USERNAME = 'prathamchouhan'
-        IMAGE_NAME = 'flask-app-p'
+        IMAGE_NAME = 'flask-app-pratham'
         // This credential ID created in Jenkins Credentials
         DOCKER_CREDENTIALS_ID = 'dockerhub-credentials-pratham'
     }
@@ -28,7 +28,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo 'Building Docker image...'
-                sh "docker buildx --load -t ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:latest ."
+                sh "docker build -t ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:latest ."
             }
         }
 
